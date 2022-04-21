@@ -1,58 +1,25 @@
 {
-  "name": "my-app",
-  "productName": "my-app",
+  "name": "-lab7-laberinto",
   "version": "1.0.0",
-  "description": "My Electron application description",
-  "main": "src/index.js",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "build": "webpack ",
+    "start": "index.html"
   },
-  "keywords": [],
-  "author": {
-    "name": "rebecca-s-m",
-    "email": "rebecca.smith1220.rs@gmail.com"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsmith1220/-Lab7-laberinto.git"
   },
-  "license": "MIT",
-  "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "my_app"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ]
-    }
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rsmith1220/-Lab7-laberinto/issues"
   },
+  "homepage": "https://github.com/rsmith1220/-Lab7-laberinto#readme",
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
-  },
-  "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.63",
-    "@electron-forge/maker-deb": "^6.0.0-beta.63",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
-    "@electron-forge/maker-zip": "^6.0.0-beta.63",
-    "electron": "18.0.4"
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
   }
 }
