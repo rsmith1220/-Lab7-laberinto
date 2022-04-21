@@ -1,7 +1,7 @@
 import React from 'react'
-import {b} from './renderer.js'
+import {b} from './laberinto.js'
 import img from './grass.jpg'
-const Pared = ({x,y}) =>{
+const Floor = ({x,y}) =>{
 
     const style = {
         width: `${b}px`,
@@ -16,4 +16,4 @@ const Pared = ({x,y}) =>{
     )
 }
 
-export default Pared
+export default Floor

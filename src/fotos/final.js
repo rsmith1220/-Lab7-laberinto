@@ -1,5 +1,5 @@
 import React from 'react'
-import {b} from './renderer.js'
+import {b} from './laberinto.js'
 import img from './Portal.jpg'
 const Goal = ({x,y}) =>{
 

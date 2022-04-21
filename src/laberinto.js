@@ -1,20 +1,15 @@
-// Rebecca Smith
-// Laboratorio 7 
-
-
 import React, { useEffect } from 'react'
-import Pared from './wall.jsx'
-import Player from './jugador.jsx'
-import Goal from './goal.jsx'
-import Floor from './fondo.jsx'
-import img from './grass.jpg'
-
+import Pared from './wall.js'
+import Player from './jugador.js'
+import Goal from './final.js'
+import Floor from './floor.js'
+//import img from './backgr.png'
 
 const w=7
 const h=5
 const b=50
 
-
+//https://maze.juanelcaballo.club/?type=json&w=4&h=4
 
 const Laberinto = () =>{
     const loadMaze = () =>{
@@ -28,7 +23,6 @@ const Laberinto = () =>{
             }
         )
     }
-
     const [laberinto, setLaberinto] = React.useState([])
     const [direction, setDirection] = React.useState(0)
     const [x, setX] = React.useState(1)
@@ -50,6 +44,8 @@ const Laberinto = () =>{
         setX(1)
         setY(1)
     }
+    
+
     useEffect(loadMaze,[])
     
     const handleKeyDown = (e)=> {
@@ -148,9 +144,8 @@ const Laberinto = () =>{
         </div>
     </div>
     )
-
+    
 }
 
 export {b}
 export default Laberinto
-

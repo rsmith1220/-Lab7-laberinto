@@ -1,5 +1,5 @@
 import React from 'react'
-import {b} from './renderer.js'
+import {b} from './laberinto.jsx'
 import img from './ghostLeft.png'
 import img2 from './ghostRight.png'
 const Player = ({direction,x,y}) =>{
