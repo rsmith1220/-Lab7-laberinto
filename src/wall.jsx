@@ -1,7 +1,7 @@
 import React from 'react'
-import {b} from './laberinto.js'
-import img from './fotos/grass.png'
-const Floor = ({x,y}) =>{
+import {b} from './laberinto.jsx'
+import img from './fotos/wall.png'
+const Wall = ({x,y}) =>{
 
     const style = {
         width: `${b}px`,
@@ -16,4 +16,4 @@ const Floor = ({x,y}) =>{
     )
 }
 
-export default Floor
+export default Wall

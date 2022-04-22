@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
-import Pared from './wall.js'
-import Player from './ghost.js'
-import Goal from './final.js'
-import Floor from './floor.js'
+import Pared from './wall.jsx'
+import Player from './ghost.jsx'
+import Goal from './final.jsx'
+import Floor from './floor.jsx'
 import img from './fotos/grass.png'
+
 
 const w=7
 const h=5
@@ -11,7 +12,7 @@ const b=50
 
 //https://maze.juanelcaballo.club/?type=json&w=4&h=4
 
-const Laberinto = () =>{
+const App =() =>{
     const loadMaze = () =>{
         fetch(`https://maze.juanelcaballo.club/?type=json&w=${width}&h=${height}`).then(
             (response)=>{
@@ -146,6 +147,12 @@ const Laberinto = () =>{
     )
     
 }
+
+ReactDOM.render(<App/>,document.getElementById('root'));
+// render(
+//     <App/>,
+//     document.getElementById('app'),
+// );
 
 export {b}
 export default Laberinto
