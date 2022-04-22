@@ -3,7 +3,7 @@ import Pared from './wall.js'
 import Player from './ghost.js'
 import Goal from './final.js'
 import Floor from './floor.js'
-import img from './grass.png'
+import img from './fotos/grass.png'
 
 const w=7
 const h=5

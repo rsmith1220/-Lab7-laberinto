@@ -1,6 +1,6 @@
 import React from 'react'
 import {b} from './laberinto.js'
-import img from './fotos/ghostLeft.png'
+import img from './fotos/gohstLeft.png'
 import img2 from './fotos/ghostRigth.png'
 const Fantasma = ({direction,x,y}) =>{
     let rotacion = 0

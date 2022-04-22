@@ -7,11 +7,11 @@ module.exports = {
     path:path.resolve(__dirname, "dist"),
   },
   module: {
-    rules: [{test: /\.jsx?$/, use: ["babel-loader", "eslint-loader"]}, {test: /\.png$/, use: "file-loader"}, {test: /\.jpg$/, use: "file-loader"}]
+    rules: [{test: /\.jsx?$/, use: ["babel-loader"]}, {test: /\.png$/, use: "file-loader"}, {test: /\.jpg$/, use: "file-loader"}]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "index.html"),
+      template: path.join(__dirname, "public", "index.html"),
     }),
   ],
 }

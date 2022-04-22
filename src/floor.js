@@ -1,6 +1,6 @@
 import React from 'react'
 import {b} from './laberinto.js'
-import img from './grass.png'
+import img from './fotos/grass.png'
 const Floor = ({x,y}) =>{
 
     const style = {

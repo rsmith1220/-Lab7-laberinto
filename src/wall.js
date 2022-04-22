@@ -1,6 +1,6 @@
 import React from 'react'
 import {b} from './laberinto.js'
-import img from './wall.png'
+import img from './fotos/wall.png'
 const Wall = ({x,y}) =>{
 
     const style = {
