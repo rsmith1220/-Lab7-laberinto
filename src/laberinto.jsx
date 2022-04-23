@@ -4,11 +4,8 @@ import Wall from './wall.jsx'
 import Fantasma from './ghost.jsx'
 import Goal from './final.jsx'
 import Floor from './floor.jsx'
-import img from './fotos/grass.png'
 
 
-const w=5
-const h=5
 const b=50
 
 //https://maze.juanelcaballo.club/?type=json&w=4&h=4
@@ -20,8 +17,8 @@ const App =() =>{
     const [direction, setDirection] = React.useState(0)
     const [x, setX] = React.useState(1)
     const [y, setY] = React.useState(1)
-    const [width, setWidth] = React.useState(w)
-    const [height, setHeight] = React.useState(h)
+    const [width, setWidth] = React.useState(5)
+    const [height, setHeight] = React.useState(6)
     
     const loadMaze = () =>{
         fetch("https://maze.juanelcaballo.club/?type=json&w="+width+"&h="+height).then(
@@ -108,18 +105,19 @@ const App =() =>{
     <div  onKeyDown={handleKeyDown} tabIndex = "0">
         <div style={containerStyle}>
             <h1 style={titleStyle}>Ghost escape</h1>
+            <object data="./Untitled.svg" width="100" height="100"> </object>
             <div style={settingsStyle} >
                 <h4>Ancho:</h4>
-                <input type="number" id="ancho" name="quantity" min="3" max="10" placeholder={width}></input>
+                <input type="number" id="ancho" name="quantity"  defaultValue={width} min="2" max="10" onChange={e => setWidth(e.target.value)}></input>
                 <input value='Guardar' type="submit" onClick={dimensionWidth} ></input>
                 <h4>Alto:</h4>
                 <input type="number" id="alto" name="quantity" min="3" max="10" placeholder={height}></input>
                 <input value='Guardar' type="submit" onClick={dimensionHeight}></input>  
-                <br/>
-                <br/>
+                <p></p>
                 <button onClick={loadMaze}>Recargar</button>
                 {/* <button onClick={loadMaze}>Recargar laberinto</button> */}
             </div>
+
 
             
 
