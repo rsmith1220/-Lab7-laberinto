@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import {b} from './laberinto.jsx'
 import img from './fotos/grass.png'
 const Floor = ({x,y}) =>{

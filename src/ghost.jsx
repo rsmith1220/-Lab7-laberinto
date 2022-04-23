@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import {b} from './laberinto.jsx'
 import img from './fotos/gohstLeft.png'
 import img2 from './fotos/ghostRight.png'

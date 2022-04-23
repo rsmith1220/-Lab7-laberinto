@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
-import Pared from './wall.jsx'
-import Player from './ghost.jsx'
+import ReactDOM from 'react-dom'
+import Wall from './wall.jsx'
+import Fantasma from './ghost.jsx'
 import Goal from './final.jsx'
 import Floor from './floor.jsx'
 import img from './fotos/grass.png'
@@ -13,6 +14,15 @@ const b=50
 //https://maze.juanelcaballo.club/?type=json&w=4&h=4
 
 const App =() =>{
+
+
+    const [laberinto, setLaberinto] = React.useState([])
+    const [direction, setDirection] = React.useState(0)
+    const [x, setX] = React.useState(1)
+    const [y, setY] = React.useState(1)
+    const [width, setWidth] = React.useState(w)
+    const [height, setHeight] = React.useState(h)
+
     const loadMaze = () =>{
         fetch(`https://maze.juanelcaballo.club/?type=json&w=${width}&h=${height}`).then(
             (response)=>{
@@ -24,13 +34,7 @@ const App =() =>{
             }
         )
     }
-    const [laberinto, setLaberinto] = React.useState([])
-    const [direction, setDirection] = React.useState(0)
-    const [x, setX] = React.useState(1)
-    const [y, setY] = React.useState(1)
-    const [width, setWidth] = React.useState(w)
-    const [height, setHeight] = React.useState(h)
-
+    
     const dimensionWidth = () =>{
         const widthValue = document.getElementById('ancho').value
         const newWidth = parseInt(widthValue)
@@ -123,10 +127,10 @@ const App =() =>{
           {laberinto.map((row,rowIndex)=>{
             return row.map((column,columnIndex)=>{
                 if(column==='-' || column==='+'||column==='|'){
-                    return <Pared key={`${columnIndex}-${rowIndex}`} x={columnIndex} y={rowIndex}/>
+                    return <Wall key={`${columnIndex}-${rowIndex}`} x={columnIndex} y={rowIndex}/>
                 }
                 if(column==='p'){
-                    return <Player direction={direction} x={x} y={y}               
+                    return <Fantasma direction={direction} x={x} y={y}               
                     />
                     
                 }
@@ -148,11 +152,8 @@ const App =() =>{
     
 }
 
-ReactDOM.render(<App/>,document.getElementById('root'));
-// render(
-//     <App/>,
-//     document.getElementById('app'),
-// );
+// ReactDOM.render(<App/>,document.getElementById('root'));
+ReactDOM.render( <App />, document.getElementById('root'))
 
 export {b}
 export default Laberinto
