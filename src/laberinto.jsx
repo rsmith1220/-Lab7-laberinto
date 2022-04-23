@@ -4,6 +4,7 @@ import Wall from './wall.jsx'
 import Fantasma from './ghost.jsx'
 import Goal from './final.jsx'
 import Floor from './floor.jsx'
+import Ghost from './fotos/Ghost.svg'
 
 
 const b=50
@@ -104,9 +105,11 @@ const App =() =>{
     return (
     <div  onKeyDown={handleKeyDown} tabIndex = "0">
         <div style={containerStyle}>
+        <object data={Ghost} width="100" height="100"> </object>
             <h1 style={titleStyle}>Ghost escape</h1>
-            <object data="./Untitled.svg" width="100" height="100"> </object>
+            
             <div style={settingsStyle} >
+            
                 <h4>Ancho:</h4>
                 <input type="number" id="ancho" name="quantity"  defaultValue={width} min="2" max="10" onChange={e => setWidth(e.target.value)}></input>
                 <input value='Guardar' type="submit" onClick={dimensionWidth} ></input>

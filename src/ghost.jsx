@@ -17,7 +17,7 @@ const Fantasma = ({direction,x,y}) =>{
         rotacion = 0
     }
     if(direction === 3){
-        rotacion = 90
+        rotacion = 0
         const style = {
         width: `${b}px`,
         height: `${b}px`,
