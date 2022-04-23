@@ -7,13 +7,12 @@ const Wall = ({x,y}) =>{
     const style = {
         width: `${b}px`,
         height: `${b}px`,
-        background: 'black',
+        background: 'none',
         gridColumnStart: x+1,
         gridRowStart: y+1
     }
     return (
         <img src={img} style={style}/>
-    //<div style={style}></div>
     )
 }
 

@@ -13,7 +13,6 @@ const Floor = ({x,y}) =>{
     }
     return (
         <img src={img} style={style}/>
-    //<div style={style}></div>
     )
 }
 

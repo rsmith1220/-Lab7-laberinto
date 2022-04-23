@@ -7,7 +7,7 @@ const Goal = ({x,y}) =>{
     const style = {
         width: `${b}px`,
         height: `${b}px`,
-        background: 'pink',
+        background: 'none',
         gridColumnStart: x+1,
         gridRowStart: y+1
     }

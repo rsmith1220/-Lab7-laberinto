@@ -7,7 +7,7 @@ import Floor from './floor.jsx'
 import img from './fotos/grass.png'
 
 
-const w=7
+const w=5
 const h=5
 const b=50
 
@@ -22,11 +22,11 @@ const App =() =>{
     const [y, setY] = React.useState(1)
     const [width, setWidth] = React.useState(w)
     const [height, setHeight] = React.useState(h)
-
+    
     const loadMaze = () =>{
-        fetch(`https://maze.juanelcaballo.club/?type=json&w=${width}&h=${height}`).then(
-            (response)=>{
-                return response.json()
+        fetch("https://maze.juanelcaballo.club/?type=json&w="+width+"&h="+height).then(
+        response=>{
+                return response.json();
             }   
         ).then(
             (response)=>{
@@ -89,17 +89,17 @@ const App =() =>{
     const containerStyle = {
         display: 'flex',
         flexDirection: 'row',
-        marginBottom:'20px',
+        marginBottom:'5px',
     }
     const titleStyle = {
         fontSize: '30px',
         fontFamily:'arial',
-        color: 'red'
+        color: 'blue'
     }
     const settingsStyle = {
         marginLeft: '200px',
         fontFamily: 'arial',
-        background:'white',
+        background:'none',
         padding:'0  px'
     }
    
@@ -107,7 +107,7 @@ const App =() =>{
     return (
     <div  onKeyDown={handleKeyDown} tabIndex = "0">
         <div style={containerStyle}>
-            <h1 style={titleStyle}>Ghost excape</h1>
+            <h1 style={titleStyle}>Ghost escape</h1>
             <div style={settingsStyle} >
                 <h4>Ancho:</h4>
                 <input type="number" id="ancho" name="quantity" min="3" max="10" placeholder={width}></input>
@@ -117,7 +117,8 @@ const App =() =>{
                 <input value='Guardar' type="submit" onClick={dimensionHeight}></input>  
                 <br/>
                 <br/>
-                <button onClick={loadMaze}>Recargar laberinto</button>
+                <button onClick={loadMaze}>Recargar</button>
+                {/* <button onClick={loadMaze}>Recargar laberinto</button> */}
             </div>
 
             

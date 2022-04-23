@@ -6,18 +6,18 @@ import img2 from './fotos/ghostRight.png'
 const Fantasma = ({direction,x,y}) =>{
     let rotacion = 0
     if(direction === 0){
-        rotacion = 270
+        rotacion = 0
     }
     if(direction === 1){
     
-        rotacion = 0
+        rotacion = 270
         
     }
     if(direction === 2){
-        rotacion = 90
+        rotacion = 0
     }
     if(direction === 3){
-        rotacion = 0
+        rotacion = 90
         const style = {
         width: `${b}px`,
         height: `${b}px`,
