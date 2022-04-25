@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {b} from './laberinto.jsx'
-import img from './fotos/gohstLeft.png'
-import img2 from './fotos/ghostRight.png'
+import foto from './fotos/Ghost.svg'
+import foto2 from './fotos/Ghost.svg'
 const Fantasma = ({direction,x,y}) =>{
     let rotacion = 0
     if(direction === 0){
@@ -27,7 +27,7 @@ const Fantasma = ({direction,x,y}) =>{
     
     }
     return (
-        <img src={img} style={style}/>
+        <img src={foto} alt=""/>
         )
     }
 
@@ -44,7 +44,7 @@ const Fantasma = ({direction,x,y}) =>{
     
     }
     return (
-        <img src={img2} style={style}/>
+        <img src={foto2} alt=""/>
         )
 
 

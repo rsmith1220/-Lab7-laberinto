@@ -107,7 +107,9 @@ const App =() =>{
         <div style={containerStyle}>
         <object data={Ghost} width="100" height="100"> </object>
             <h1 style={titleStyle}>Ghost escape</h1>
-            
+            <audio controls>
+                    <source src="./ghostmusic.mp3" type="audio/ogg"/>
+                </audio>
             <div style={settingsStyle} >
             
                 <h4>Ancho:</h4>
