@@ -6,6 +6,7 @@ import Goal from './final.jsx'
 import Floor from './floor.jsx'
 import Ghost from './fotos/Ghost.svg'
 
+const {app,BrowserWindow} =require('electron')
 
 const b=50
 
